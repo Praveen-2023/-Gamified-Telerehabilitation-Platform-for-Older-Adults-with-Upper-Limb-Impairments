@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arm Orchard – Fruit Fetch Therapy Game</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <aside class="panel">
+      <h1>🍎 Arm Orchard – Fruit Fetch</h1>
+      <p class="muted">Upper limb rehabilitation game: Reach → Grasp (close hand) → Transport → Release (open hand) into basket. 5-minute therapeutic session.</p>
+
+      <!-- Moved calibration overlay to side panel -->
+      <div id="calibOverlay" class="calibOverlay-side hidden">
+        <div id="calibText">Calibration instructions...</div>
+      </div>
+
+      <div id="videoWrap">
+        <video id="video" autoplay playsinline muted></video>
+        <canvas id="overlay"></canvas>
+        <div id="positionIndicator" class="position-indicator hidden">
+          <div id="posStatus" class="pos-status">Position Status</div>
+        </div>
+        <div class="hand-status">
+          <div id="leftHandStatus" class="hand-indicator hidden">
+            <span class="dot"></span>
+            <span>Left</span>
+          </div>
+          <div id="rightHandStatus" class="hand-indicator hidden">
+            <span class="dot"></span>
+            <span>Right</span>
+          </div>
+        </div>
+        <div id="debugPanel" class="debug-panel hidden"></div>
+      </div>
+
+      <!-- Camera Error Modal -->
+      <div id="errorModal" class="error-modal hidden">
+        <div class="error-content">
+          <h2>⚠️ Camera Error</h2>
+          <p id="errorMsg">Unable to access camera. Please check:</p>
+          <ul>
+            <li>Camera permissions are allowed in your browser</li>
+            <li>No other app is using the camera</li>
+            <li>You are using a supported browser (Chrome, Edge, Firefox)</li>
+            <li>Camera is properly connected</li>
+          </ul>
+          <button id="retryCamera">🔁 Retry</button>
+          <button id="closeError">Close</button>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="startCal">📏 Start Hand Assessment & Calibration</button>
+        <button id="startGame" disabled>▶️ Start 5min Session</button>
+        <button id="stopGame" disabled>⛔ Stop Game</button>
+        <label style="margin-top: 8px;">
+          <input id="assistiveMode" type="checkbox">
+          <span>Assistive Mode (Auto-detected from calibration)</span>
+        </label>
+      </div>
+
+      <div class="stats">
+        <div class="stat-item">
+          <div class="stat-label">ARAT Score</div>
+          <div class="stat-value" id="score">0</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Reps</div>
+          <div class="stat-value" id="reps">0</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Timer</div>
+          <div class="stat-value" id="timer">05:00</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-label">Success</div>
+          <div class="stat-value" id="succ">0%</div>
+        </div>
+      </div>
+
+      <div class="actions">
+        <button id="downloadCsv">💾 Download CSV</button>
+        <button id="reset">🔄 Reset</button>
+      </div>
+
+      <div class="note">
+        <strong>How to play:</strong>
+        • Make a <strong style="color: #dc3545;">FIST (closed)</strong> to grasp the fruit 🔴<br>
+        • <strong style="color: #28a745;">OPEN PALM (spread fingers)</strong> to release into basket 🟢<br>
+        • The <strong>crosshair circle</strong> on your palm is your cursor<br>
+        • Watch the colored skeleton - Red = Closed, Green = Open<br>
+        • Press <strong>'D'</strong> to show debug metrics<br>
+        • <strong>Calibration</strong> now tests hand function to auto-detect assistive mode<br>
+        • <strong>Ideal:</strong> Sit ~1m away, full torso + hands visible in frame
+      </div>
+    </aside>
+
+    <main class="game-area">
+      <canvas id="gameCanvas"></canvas>
+      <!-- Trial Timer Display (now top-right in CSS for better visibility) -->
+      <div id="trialTimer" class="trial-timer hidden">⏱️ 10s</div>
+      <div id="statusMsg" class="status-message hidden"></div>
+    </main>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/hands/hands.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/pose/pose.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@mediapipe/camera_utils/camera_utils.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

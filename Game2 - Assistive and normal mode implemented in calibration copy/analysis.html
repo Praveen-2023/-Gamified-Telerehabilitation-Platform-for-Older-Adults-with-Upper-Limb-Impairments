@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Arm Orchard – Data Analysis</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <style>
+.analysis-container { 
+  display: flex; 
+  flex-direction: column; 
+  min-height: 100vh;      /* allows page to grow */
+  padding: 12px; 
+  gap: 12px; 
+}
+body {
+  overflow-y: auto;
+}
+.charts-grid {
+  overflow-y: auto;
+  padding-right: 6px;
+}
+
+    .drop-zone { border: 2px dashed #2f7a2f; border-radius: 10px; padding: 2em; text-align: center; background: #f9f9f9; cursor: pointer; transition: all 0.2s; }
+    .drop-zone:hover { background: #eaf7ea; }
+    .drop-zone.dragover { border-color: #267026; background: #eaf7ea; }
+    .drop-zone p { margin: 0; color: #575f56; font-size: 1.1em; }
+    .charts-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); gap: 12px; flex: 1; }
+    .chart-container { background: white; padding: 1em; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .chart-container h3 { margin-top: 0; color: #2f7a2f; }
+    .hidden { display: none; }
+    .stats-summary { background: white; padding: 1em; border-radius: 10px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .stats-summary ul { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1em; list-style: none; padding: 0; }
+    .stats-summary li { padding: 0.5em; background: #f9f9f9; border-radius: 6px; }
+    .download-btn { margin-top: 1em; padding: 0.5em 1em; background: #2f7a2f; color: white; border: none; border-radius: 6px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="analysis-container">
+    <h1 style="margin: 0; color: #2f7a2f;">📊 Arm Orchard – Session Analysis</h1>
+    <p class="muted" style="margin: 0;">Upload your CSV export to visualize performance metrics.</p>
+
+    <div id="dropZone" class="drop-zone">
+      <p>📁 Drag & drop your CSV file here</p>
+      <p>or <input type="file" id="fileInput" accept=".csv" style="display: none;" /></p>
+      <button onclick="document.getElementById('fileInput').click();">Browse Files</button>
+    </div>
+
+    <div id="statsSummary" class="stats-summary hidden">
+      <h3>Quick Stats</h3>
+      <ul id="statsList"></ul>
+      <button id="downloadCleanCsv" class="download-btn">💾 Download Clean CSV</button>
+    </div>
+
+    <div id="chartsGrid" class="charts-grid hidden"></div>
+  </div>
+
+  <script src="analysis.js"></script>
+</body>
+</html>

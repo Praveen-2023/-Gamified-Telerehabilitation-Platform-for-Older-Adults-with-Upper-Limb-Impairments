@@ -1,0 +1,47 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .premium-card {
+    @apply bg-white dark:bg-gray-900 rounded-3xl shadow-premium border border-gray-100/50 dark:border-gray-800 transition-all duration-300 hover:shadow-premium-hover dark:hover:shadow-blue-900/10 hover:scale-[1.01];
+  }
+  
+  .glass-card {
+    @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl rounded-3xl shadow-premium border border-white/20 dark:border-gray-700/30;
+  }
+
+  .nav-item {
+    @apply flex items-center space-x-3 mx-3 my-1 rounded-2xl px-4 py-3 cursor-pointer transition-all duration-300 font-medium;
+  }
+
+  .nav-item-active {
+    @apply bg-primary-500 text-white shadow-lg shadow-primary-200 dark:shadow-primary-900/20;
+  }
+
+  .nav-item-inactive {
+    @apply text-gray-500 dark:text-gray-400 hover:bg-primary-50 dark:hover:bg-gray-800 hover:text-primary-600 dark:hover:text-primary-400;
+  }
+
+  .fade-in {
+    animation: fadeIn 0.5s ease-out forwards;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+body {
+  @apply bg-[#F4F7FE] dark:bg-black text-gray-800 dark:text-gray-100 min-h-screen font-sans;
+}
+
+.game-letter {
+  animation: fadeInScale 0.3s ease-out;
+}
+
+@keyframes fadeInScale {
+  from { opacity: 0; transform: scale(0.5); }
+  to { opacity: 1; transform: scale(1); }
+}

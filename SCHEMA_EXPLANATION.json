@@ -1,0 +1,35 @@
+{
+  "schema": {
+    "currentlevelspan": "Time user has to respond (1-10 seconds)",
+    "game": [
+      {
+        "type": "type1",
+        "name": "Reaction Game",
+        "eachGameStats": [
+          {
+            "time": "Session start time",
+            "levelspan": "levelspan used for this session",
+            "play": [
+              {
+                "responsetime": "0 to levelspan OR -1 if exceeded",
+                "correct": "1=correct, -1=incorrect, 0=not done"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "game_logic": {
+    "display": "Show A or S",
+    "timer": "User has currentlevelspan seconds",
+    "on_response": "Record actual time and correct status",
+    "on_timeout": "Set responsetime=-1, correct=0"
+  },
+  "visualization": {
+    "scatter_plot": "X=attempt, Y=responsetime, Color=correct status",
+    "bar_chart": "Correct/Incorrect/NotDone per session",
+    "pie_chart": "Overall distribution",
+    "line_chart": "Response time trends"
+  }
+}

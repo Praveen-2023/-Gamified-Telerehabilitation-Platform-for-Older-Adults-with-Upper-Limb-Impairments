@@ -1,0 +1,582 @@
+High Fidelity Prototype Design for Gamiﬁed Telerehabilitation Platform for Older 
+Adults with Upper Limb Impairments.
+Worthemlan Chamroy          Aarsh Choudhary 
+24510149  
+25120001
+  Praveen Rathod 
+Vipul Sunil Patil
+22110206
+22110189
+Abstract
+This report is meant to outline the development of high-ﬁdelity prototypes for a gamiﬁed 
+telerehabilitation system designed for older adults with upper-limb impairments. It is built 
+upon the low-ﬁdelity concepts and validated user requirements  as presented in our previous 
+assignment; the high- ﬁdelity prototype delivers reﬁned game interactions, a more polished 
+visual interface as well as a functional dashboard ﬂow for the patients, caregivers and 
+clinicians. Our system will integrate responsive webcam-based motion tracking and each 
+game is designed to target speciﬁc movement categories. This stage focuses on visual 
+reﬁnement, interaction detailing and preparing the system for usability testing and the ﬁnal 
+evaluation.
+1. Introduction 
+The high-ﬁdelity prototyping stage marks for us a signiﬁcant progression in the development 
+of our gamiﬁed telerehabilitation system for older adults with upper-limb motor impairments. 
+While our earlier stages focused on identifying user needs, mapping clinical requirements and 
+sketching conceptual interactions, this phase translates those foundations into a fully realised 
+and reﬁned, interaction-ready digital experience. The high ﬁdelity prototype aims to simulate 
+the ﬁnal product as closely as possible. 
+The system is to incorporate three therapy based games, a patient focused rehabilitation 
+interface as well as dedicated dashboards for the caretakers as well as clinicians. Unlike that 
+of the low ﬁdelity prototype which emphasized more on the structure and functionality, our 
+high ﬁdelity version brings in the aspect of the implementation of our action plan. It is a 
+critical bridge between that of design exploration as well as user evaluation which enables us 
+to test not only how users interact but also how they feel while using it.
+2. System Design & System Architecture
+2.1 Overview of the System Architecture 
+Our high-ﬁdelity prototype builds upon our previous low-ﬁdelity design and implements a 
+functional software for our gamiﬁed telerehabilitation platform for older adults with upper-
+limb impairments. To summarize, the system architecture will consist of four interconnected 
+modules:
+•
+User Interface Layer: It will vary for the patient, caregiver and clinician. It also 
+includes the game interfaces, calibration and notiﬁcation panels.
+•
+Webcam Motion-Tracking Layer: It involves real time joint detection using the web 
+camera feed.
+•
+Game Engine Layer: This involves the moment veriﬁcation, scoring, difﬁculty as well 
+as the point XP system.
+•
+Data & Monitoring Layer: This includes the session data logging, performance 
+summaries, appointment scheduling and so on.
+These modules communicate through a simulated internal API, mimicking how a real-world 
+telerehabilitation system would store, process and present data.
+2.2 Game Engine Logic 
+Stage 
+Description
+•
+Calibration Phase 
+Users position their body within the camera 
+frame as the system detects major joints 
+such as shoulders, elbows, wrists and 
+ﬁngers. This ensures initial adjustment and 
+readiness for the tracking.
+2. Instruction Phase 
+The game presents a set of instructions for 
+the user to follow accordingly.
+      3.Tracking Phase 
+This involves continuous joint and limb 
+movement capture, allowing real-time 
+responsiveness.
+      4. Veriﬁcation Phase 
+The system then compares captured 
+movement patterns against predeﬁned target 
+trajectories, exercise templates or various 
+gesture requirements as per the selected 
+game.
+       5. Reward Phase 
+The users will also receive motivational 
+reinforcement such as XP points or sound 
+effect cues based on performances.
+       6. Summary Phase 
+This includes the session data like the 
+scores, accuracy, repetitions, range of 
+motions and completion times which is 
+updated to the dashboard accordingly.
+Table 1. Shared Logic Pipeline across game prototypes 
+Each game uses a shared logic pipeline, apart from Game 2 which does not use the web 
+camera but requires physical touch and interaction with the system.
+2.3 Data Flow and System Interactions
+The system follows a structured data pipeline:
+•
+The user logs into the dashboard 
+•
+Choice of Game
+•
+Calibration initiated 
+•
+Motion Data capture/ physical interaction input 
+•
+Game veriﬁcation engine checks gesture correctness
+•
+XP and streaks uploaded and updates 
+•
+Session report automatically uploaded 
+•
+Dashboards gets reports and charts accordingly 
+•
+Adherence and consistencies are monitored 
+2.4 Role- Based Dashboards 
+The system supports three user types:
+Patient Dashboard: This includes the daily session, view of weekly report/ goal, XP 
+Progress, streaks and receiving reminders, messages as well as an emergency contact 
+function.
+Caregiver Dashboard: This includes tracking the patient attendance, medication, alerts for 
+skipped sessions as well as a simpliﬁed progress graph.
+Clinician Dashboard: This includes the function to manage patients, map performance, 
+conﬁgure therapy plans as well as adjust levels accordingly and a communication function.
+ 3. Prototyping Considerations & Compromises
+3.1 Horizontal vs Vertical Fidelity 
+In order to maximize coverage especially when it came to various types of upper limb 
+mobility issues, we decided to go for a high horizontal ﬁdelity rather than a vertical ﬁdelity 
+system. Our high horizontal ﬁdelity focused on three navigation systems for the dashboards, 
+multiple games as well as reports for users, notiﬁcations and other functionalities. There was 
+however, moderate vertical ﬁdelity which focused on tracking simulation using mock joint 
+movement, calibration system, a simpliﬁed scoring engine and results/ outputs.
+3.2 Visual compromises
+•
+The colour palette remained limited.
+•
+Icons were reused across screens in order to maintain consistency 
+•
+Simple interaction system and game design due to time constrain
+ 
+3.3 Functional compromises 
+•
+Difﬁculty is pre-programmed and not dynamically computed 
+•
+Feedback is text based instead of animated overlays.
+•
+Lag in real time projection of movement of screen (minor)
+•
+Inability to implement proper Action Research Arm Test 
+These constraints are acknowledged as part of our prototyping process.
+4. Conceptual Design 
+4.1 Metaphors and interactions
+•
+Rehabilitation as Gameplay: Users are to perceive therapy as not a medical task bit 
+rather as a rewarding challenge.
+•
+Arm Orchard (Game 1) -” Garden Exercise”
+Metaphor: Picking fruit from a garden tree
+This involves studying the grasping and reaching motions naturally, gardens can also 
+represent calm and familiar spaces for older adults with fruit baskets resembling real 
+life tasks involving reaching for objects and placing them away.
+•
+Piano Tiles (Game 2) - “Music Practice”
+Metaphor: Playing a simpliﬁed piano keyboard 
+This involves pressing keys and it relates to ﬁne motor tasks. The idea of “following 
+notes” is familiar to those who have been exposed to music.
+•
+Shape Tracer (Game 3) - “ Drawing sheet”
+Metaphor: Tracing outlines of drawings onto a sheet of paper
+This involves following a pattern and outlining it accordingly. Many users must have 
+drawn or traced shapes in their childhood or at some point of time. The system then 
+becomes a virtual drawing table where they can trace out the pattern using their arms.
+•
+Result dashboard - “A personal progress board” 
+Just like in real physiotherapy or schools, there would be a bulletin board that tracks 
+improvement using charts, XP points, Check marks, etc.
+In this way, the metaphor helps users understand what the numbers mean, its not just 
+“data” but rather “the user’s progress sheet.”
+In this way our system becomes a sort of Visual Therapy Studio with three game stations 
+along with a progress board.
+4.2 Design Principles Used 
+•
+Simplicity and Learnability: Older adults beneﬁt from shallow navigation, that is,  one 
+function per screen, large buttons and no hidden menus. 
+•
+Feedback and Visibility: Real time scores increase along with movement detection 
+and auditory cues.
+•
+Consistency: The games use similar simplistic designs and layout.
+•
+Motivation: We incorporated the use of streaks, XP points and goals to help motivate 
+users.
+4.3 Action Research Arm Test integration into conceptual design 
+The ARAT assesses grasp, grip, pinch as well as gross motor movement. Although not 
+perfectly implemented, our design takes inspiration from the same. 
+ARAT Domain
+Game correspondence
+•
+Grasp 
+Arm Orchard (Fruit pick up and drop) and 
+Piano Therapy (One version required user to 
+interact with their mobile device)
+•
+Grip
+Piano Therapy (Key pressing on the mobile 
+device required wrist stability)
+•
+Gross movement 
+Arm Orchard and Shape tracer requires 
+movement including arm elevation and 
+lateral reach 
+Table 2. Game mapping alignment with the ARAT Domains 
+4.4 Design space
+The design space for our telerehabilitation system emerges at the intersection of various 
+gesture based interaction, game based motivation, clinical reporting as well as accessibility. 
+Since the objective is to help older adult users to perform structured upper-limb rehabilitation 
+at home, the design space is shaped by three key components which includes: Interaction 
+modalities, feedback mechanism and stakeholder needs. Together these elements determined 
+how each prototype supports encouragement, therapeutic accuracy as well as remote 
+monitoring. 
+•
+Interaction modalities: The three games explore different forms of interaction to 
+accommodate varying motor abilities and hardware constraints. 
+Motion-tracked interaction (Game 1 and 3): These games rely on a webcam-based 
+body tracking which focuses on joint detection  (shoulder,elbow,wrist and ﬁngers) to 
+interpret various motions like reach, grasp and tracing movements. 
+Hybrid Interaction (Game 2): This prototype expands the design space beyond motion 
+tracking by allowing direct keyboard or touchscreen input. It captures ﬁne-motor 
+inputs rather than gross motor movements.
+This mix allows the system to support a wide variety of rehabilitation needs within a 
+consistent interface.
+•
+Feedback and motivation layer: A large portion revolves around how the system keeps 
+users motivated. This includes real-time visual feedback (joint highlights, tracking 
+lines and correctness), reward systems (XP points, streaks, auditory cues and scores) 
+and simple explanations.
+•
+Multi-stakeholder requirements: The design also extends to how various stakeholders 
+can use the same ecosystem. For instance, patients would require clear guidance, fun 
+tasks and assurance in movements. On the other hand, clinicians require a more 
+structured reporting, progress summaries and adherence tracking as well as low-noise 
+performance metrics. Caretakers require reminders, alerts and simple monitoring tools 
+to support the patient.
+This holistic design space ensures that the system is not just a collection of minin-games but 
+rather a more uniﬁed rehabilitation ecosystem that can be used in order to support learning, 
+motivation as well as long term clinical insights.
+5. Prototype Description and functionalities 
+The three games represent distinct rehabilitative principles inspired by that of 
+neurorehabilitation literature. Wherein each module addresses speciﬁc domains of motor 
+recovery like reach accuracy, coordination, ﬁne motor control and upper limb range of 
+motion.
+Please refer to the demo video to understand the gameplay of our prototypes.
+5.1 Game 1: Arm Orchard 
+This game is created to stimulate a simpliﬁed reach to grasp tasks using colourful fruit as the 
+interaction object. The patient is instructed to reach towards the apple and pick them by 
+mimicking the grasp movement. The system then recognizes the movement and registers it to 
+move according to the hand and when the hand is released, so is the apple. 
+The interface provides to the patient a clear and corrective guidance. For instance, if the 
+patient were to lift beyond the ideal range of angle, the system is to ﬂag and register the 
+action as incorrect. The goal is to nudge the user towards healthier motor patterns. When the 
+fruit is deposited correctly, it is reinforced by an increase in score and sound cue.
+Visually, the game emphasises encouragement rather than clinical severity.
+ 
+Figure 1. Game 1
+5.2 Game 2: Piano Therapy 
+This game is a music-inspired exercise aimed at improving coordination . The interface 
+resembles that of a simpliﬁed piano keyboard with keys that light up according to the 
+exercise rhythm. The patients are then instructed to use their ﬁngers to perform the action 
+accordingly. When performed correctly and within the desired time range, the movement is 
+registered as correct and adds onto the existing score board.
+By grounding the game in familiar musical metaphors, it reduces anxiety associated with 
+repetitive ﬁnger movements and transforms the experience.
+Figure 2. Game 2
+5.3 Game 3: Shape Tracer 
+This game is intentionally designed with those users with limited shoulder mobility and 
+presents geometric shapes, with the users being asked to trace them by moving their arms 
+according to the traced outline provided to them. If the tracing deviates, the system 
+recognizes it accordingly and translates the same in the later results. 
+Figure 3. Game 3
+Game
+Functional Goal 
+Rehabilitation Goal 
+Arm Orchard
+Grab apples and place it into 
+the basket 
+Improve reach, shoulder 
+stabilization and arm 
+movement 
+Piano Therapy 
+Press keys in timed 
+sequence
+Improve ﬁne motor 
+precision of ﬁngers 
+Shape Tracer
+Trace shapes 
+Enhance range of motion 
+and coordination of 
+movement 
+Table 3. Game to goal relationship 
+5.4 Dashboard ecosystem 
+While the games form the core therapeutic experience, the dashboards establish the 
+scaffolding  which then connects patients, caretakers as well as clinicians. We had each of the 
+dashboards reworked to reﬂect our perceived requirements for each user type.
+Please refer to the application for more detailed overview.
+•
+Patient Dashboard: The user is greeted with warm colour, readable fonts and a focus 
+on efﬁcacy.
+Figure 4. Patient dashboard 
+•
+Caregiver Dashboard: This dashboard is designed with simplicity in our mind. It tries 
+to reframe rehabilitation as not a clinical obligation but rather a family-supported 
+activity. 
+Figure 5. Caretaker dashboard 
+•
+Clinician Dashboard: This dashboard stands in stark contrast wherein it embraces a 
+more data-dense layout, it incorporates charts, movement accuracy graphs and session 
+logs.
+Given below are images of how the clinician dashboard looks like:
+Figure 6. Clinician dashboard 
+6. User evaluation and Results:
+Before evaluating the system with users, we needed to ensure that our design had a solid 
+clinical foundation up to an extent. For this reason, we ﬁrst consulted a physiotherapist to 
+understand traditional rehabilitation challenges, essential movement parameters, and the 
+practical difﬁculties faced during home-based therapy. His inputs helped us reﬁne our game 
+mechanics, choose meaningful metrics, and identify potential risks. Once the expert 
+evaluation gave us clarity on the therapeutic direction, we proceeded to test the system with 
+users, gather their experiences, and assess its effectiveness in a realistic environment.
+We have ﬁltered some of the important details and consolidated all the required points in our 
+project report . 
+6.1 How Upper-Limb Rehabilitation Was Traditionally Done 
+Before introducing digital or game-based tools, the physiotherapist explained that upper-limb 
+rehabilitation mostly depended on manual exercises and one-on-one guidance. Treatment 
+involved a combination of passive and active range-of-motion exercises, strengthening 
+routines using elastic bands or weights, and repeated task-based activities like pegboards and 
+object transfers. Fine motor tasks such as using beads or clips were also part of the routine.
+These sessions required close supervision to correct posture, prevent compensatory 
+movements, and ensure the movements were performed safely. Progress was usually 
+monitored with simple tools like goniometers, manual muscle testing, and general 
+observation.
+Although these methods worked, they were highly subjective and depended heavily on the 
+therapist’s judgement.
+6.2 Issues Doctors Faced With Traditional Rehabilitation 
+The physiotherapist explained that traditional rehabilitation often struggled because the 
+exercises felt repetitive, which made many people lose motivation and stop following their 
+routines regularly. At home, there was no supervision, so exercises were often forgotten, done 
+incorrectly, or skipped altogether. This made it hard for therapists to know what was really 
+happening outside the clinic. They couldn’t see if someone was moving properly, using 
+harmful compensations, or getting tired too quickly. Overall, there was a clear gap between 
+what happened during therapy sessions and what happened at home, which affected recovery.
+6.3 Previous Experience With Gamiﬁed Rehabilitation 
+We were told by the physio that even though gamiﬁed rehabilitation tools like VR or Kinect 
+systems exist, they are rarely used in real clinical settings. The biggest obstacles are high 
+cost, complicated setup, the need for technical support, and calibration problems with older 
+technology. Previously they have experimented with simple mobile or smartwatch-based 
+exercise apps, and while these tools made sessions more engaging, they lacked the clinical 
+accuracy and meaningful metrics needed for serious, long-term rehabilitation.
+6.4 Doctor’s Feedback on Our Web-App
+After we explained our system, the physiotherapist provided both positive feedback and 
+suggestions for improvement.
+•
+Positive Points
+•
+The idea of blending therapy with simple games felt practical and motivating.
+•
+The app attempts to record measurable aspects such as accuracy and response time, 
+which the doctor found promising.
+•
+Camera-based calibration is seen as a strong feature—if made smooth and easy to set 
+up.
+•
+The speciﬁc movements in our games (reaching, grasping, tracing) match actual 
+therapy goals.
+•
+A guided system could help improve at-home compliance.
+•
+Detecting compensatory movements would add signiﬁcant clinical value.
+•
+Recommended Improvements
+•
+More accurate tracking of joint angles, smoothness, trajectory, and alignment.
+•
+Clinically meaningful metrics like fatigue curves and range-of-motion utilization.
+•
+Adaptive difﬁculty, so the system doesn’t overwhelm weaker users or bore stronger 
+ones.
+•
+Customization options (speed, range, repetitions) for different physical conditions.
+•
+Smooth integration into clinic workﬂows, including report export and long-term 
+tracking.
+6.5 Evaluation Metrics for Our Games
+We compiled evaluation metrics based on some of the  clinical standards and the doctor’s 
+recommendations.
+Game 1 – Arm Orchard
+Focuses on shoulder, elbow movement, and grip coordination.
+Metrics include reach accuracy, range of motion used, grip detection quality, 
+completion time, and signs of fatigue.
+Game 2 – Piano Tiles
+Focuses on hand–eye coordination, reaction time, and ﬁnger dexterity.
+Metrics include reaction time, accuracy rate, ﬁne motor control, rhythm maintenance, 
+and bilateral use.
+Game 3 – Shape Tracing
+Focuses on controlled trajectory and stability.
+Metrics include path accuracy, movement smoothness, completion time, error rate, 
+and consistency.
+6.6 Broader User Feedback (General Crowd & Non-Experts)
+We also had informal conversations with peers, seniors, and family members. Their feedback helped us 
+understand real-world usage concerns.
+A. Concerns About Accuracy
+Some people questioned whether the camera would detect gestures consistently in 
+different    lighting conditions or small rooms. Others doubted whether subtle 
+movements would register reliably.
+B. Practical Loopholes
+Many pointed out that not everyone has the ideal setup; space, lighting, or a good 
+webcam.
+People may also stand incorrectly, move out of frame, or depend too much on 
+network stability.
+ 
+C.Usability Friction
+If the app fails to detect a gesture, individuals may assume they did the movement 
+wrong, causing frustration.
+D. Safety Concerns
+Observers worried about the lack of automatic correction for unsafe movements or 
+overly fast motions.
+E. Inclusivity
+Not everyone can form a perfect ﬁst or follow fast instructions. People with tremors 
+or cognitive difﬁculties may struggle without slower, more ﬂexible instructions.
+6.7 Types of Observations Conducted : 
+Types of Observation
+                              Descriptions
+Expert Observation (Doctor Evaluation)
+Assessed therapeutic relevance, accuracy of movement 
+detection, safety, compensatory behaviors, and clinical 
+usefulness of the system.
+Usability Observation (Task-Based Testing)
+Observed how individuals interacted with the system in a 
+real-world setting without guidance, noting ease of use, 
+understanding, and spontaneous behavior.
+Think-Aloud Observation
+Users performed speciﬁc tasks within each game; we 
+observed errors, task completion time, confusion points, 
+and overall task performance.
+Behavioral Observation
+Users verbalized their thoughts while using the system, 
+helping us understand their reasoning, expectations, 
+and confusion during interactions.
+Contextual/Environmental Observation
+Monitored users’ body movements, posture, fatigue signs, 
+hesitations, and any compensatory movements during 
+gameplay.
+Non-Expert / General Crowd Observation
+Evaluated how physical environment factors lighting, 
+space, camera position, background impacted usability 
+and tracking accuracy.
+Caretaker Observation
+Noted caretaker involvement, challenges faced during 
+assistance, and their perspective on setup, instructions, 
+and usability.
+7. Ethics and Risk Assessment 
+7.1 Ethical Design considerations and Risk management 
+Ensuring ethical integrity is crucial when it comes to designing and evaluating digital 
+rehabilitation systems especially in our case where we work with older adults with physical 
+impairments and possible reduced cognitive capacity. It goes beyond just formal consent but 
+rather emotional well being, safety and access as well as a responsible representation of user 
+needs. 
+Although our evaluation did not involve the target population, we stimulated ethical protocols 
+that would be required in a real world deployment. We had informed the participants the 
+purpose of the evaluation, the voluntary nature of participation as well as their right to 
+withdraw at any given time. They were encouraged to express any sort of discomfort, 
+confusion or frustration openly so that we can use their feedback in the future.
+We also believe that ethics must be integrated into the system and we do this at broadly three 
+various levels. They are:
+•
+Privacy: Wherein only essential tracking data is collected, no facial recognition or 
+identity markers are stored.
+•
+Transparency: The users are also informed each time data uploads or is shared. They 
+are allowed to withdraw and delete their account and in turn erasing data completely.
+•
+Autonomy: The users can pause or exit the game at any given point of time without 
+any penalty. We do this in order to support the personal agency of the patient in their 
+rehabilitation journey.
+Additionally, one of the highest risks in rehabilitation systems is in terms of physical harm. 
+Our prototypes mitigate these risks by incorporating slow guided movements to prevent any 
+sort of strain, fatigue or injury. The system also ﬂags incorrect posture patterns and provides a 
+calibration phase to ensure safe and smooth running. There also exists an emergency contact 
+button that alerts clinicians and authorities in case of any accidents or issues.
+ 
+Telerehabilitation systems usually inherently involve the user possessing diverse physical, 
+cognitive as well as emotional states. Therefore our high ﬁdelity design explicitly addresses 
+these needs and is done so by prioritising clarity, safety as well as dignity of the users.
+•
+Physical accessibility 
+Each game has been designed to accommodate various levels of motor function:
+Game 1 (Arm Orchard): Target with slow motion support with limited reach accuracy.
+Game 2 (Piano Therapy): Task can be adjusted for tempo to accommodate range.
+Moreover, camera-based exercises allow the user to remain seated which in turn 
+prevents and reduces any fall risk which can be a major concern for home 
+rehabilitation.
+•
+Cognitive accessibility 
+Older adults or users with mild cognitive impairment may struggle with complex 
+instructions. Hence, we have made certain adjustments to ensure smooth functioning. 
+Instructions appear in short, step-by-step segments. There is simple color coding 
+across modules (green=correct, red= incorrect). Icons also rely on familiar metaphors 
+such as musical keyboard, shapes, etc rather than simply abstract symbols.
+This therefore reduces cognitive load and also aids in the strengthening of 
+comprehension.
+•
+Emotional and motivational accessibility 
+As we already know, rehabilitation can be emotionally draining and so in order to 
+counter this we have incorporated certain elements into our high ﬁdelity prototype. 
+All modules incorporate warm colors and smooth transitions along with soft sound 
+cues. The system avoids any sort of language that implies “failure or blame”, but 
+rather encourages the user. Progress is also celebrated and this can be seen through 
+XP points as well as streak indicators. Additionally the games are designed to feel 
+playful rather than simply clinical.
+In this way, we ensure our approach aligns with positive reinforcement which we 
+believe will increase the user’s adherence dramatically especially when it comes to 
+remote therapy.
+7.2 Limitations
+Despite the various strengths of our prototype and clarity in our design rationale, we do 
+acknowledge that there are several methodological, technical as well as conceptual 
+limitations. These limitations do not necessarily detract the value of our work but rather 
+frame the boundaries within which our ﬁndings and design decisions should be interpreted.
+One of the limitations would be that the motion-tracking system is simulated and may not be 
+clinically validated. While the prototype models joint tracking and gesture detection, it does 
+not employ real medical grade depth sensors. Our calibration module also uses oversimpliﬁed 
+posture and forearm alignment however older adults with restricted mobility may struggle 
+and the calibration requires repeated position sampling. There is also lighting variation that 
+might affect the system and reduce accuracy. 
+Although the prototype was tested through user walkthroughs and heuristics, the sample did 
+not represent the true target population, namely the older adults with upper limb mobility 
+impairment. This limits the generalizability of usability ﬁndings.
+While the exercise movements were informed by that of physiotherapy principles and ARAT 
+relevant components, there was no licensed clinician who supervised the prototype 
+development.
+Our three games aimed to strike balance between that of motivation and therapeutic functions 
+but they do still possess inherent limitations. For instance, movements lack adjustable 
+intensity and pacing and do not account for fatigue accumulation or cognitive load. The 
+system also requires a webcam, stable internet and a device that can render interactive 
+graphics and therefore may unintentionally exclude certain users.
+Nevertheless, the prototype still provides a strong conceptual foundation on which a fully 
+functional telerehabilitation system can be built upon.
+8. Conclusion
+The development of this high-ﬁdelity telerehabilitation system is a representation of our 
+team’s attempt to explore how digital technologies can be meaningfully integrated into upper 
+limb motor recovery. It was through the extensive multi-stage design process, beginning with 
+user research and literature review to the creation of personas and low ﬁdelity sketching that 
+the project eventually evolved into a coherent and functional system encompassing three 
+rehabilitation games, user speciﬁc dashboard and interfaces as well as tools. Although 
+conceptual and stimulation-based, it can be seen that it successfully demonstrates how 
+rehabilitation tasks can be gamiﬁed, structured and interpreted within a uniﬁed ecosystem.
+We believe that a key achievement in our project lies in its user-centered design approach 
+which ensures that the system addresses the needs of the various stakeholders: the patient, the 
+clinician as well as that of the caretaker. When it comes to the three games, it further 
+exempliﬁed how diverse rehabilitation movement can be embedded within an approachable 
+gameplay metaphor. We had integrated visual cues, feedback and framing to try and bridge 
+the motivational gap that often challenges patient adherence when it came to traditional 
+home-based exercises.
+At the same time, we acknowledge the technical as well as methodological limitations. Given 
+the short amount of time, there was much we would have liked to incorporate but were 
+unable to do so. As mentioned, we believe there are various other possibilities to carry on the 
+idea and project. Despite the constraints, the prototype succeeds in demonstrating what we 
+call “proof of concept” wherein we have a system that uniﬁes physical rehabilitation, 
+meaningful feedback as well as reinforcement and oversight. It outlines a sort of realistic 
+pathway for how further work can be done to evolve it into a hybrid system.
+In summary, this project offers a compelling starting point for further work in the future when 
+it comes to digital rehabilitation. The aim was to articulate the design space, establish core 
+interaction ﬂow and reveal critical opportunities for reﬁnement through real-world testing.
+Acknowledgement 
+We would like to express our sincere gratitude to Professor Yogesh Meena along with his 
+teaching assistants for their continuous guidance, constructive feedback as well as support 
+throughout the development of this project. We also extend our appreciation to the clinicians 
+and participants who generously shared their experiences and perspectives during our 
+informal evaluation and discussions. Their contributions were invaluable in helping us 
+understand the real world need and helped shape our prototype to adapt accordingly.
+Finally we also would like to acknowledge the dedication and collaborative spirit of our 
+project team. Each member’s effort and commitment to bring together this multi-stage design 
+over the semester. This project is a reﬂection of our shared hard work and collective learning 
+during the course - “Human Computer Interaction”.
+References
+1. Yozbatiran, N., Der-Yeghiaian, L., & Cramer, S. C. (2008). A standardized approach to 
+performing the Action Research Arm Test. Neurorehabilitation and Neural Repair, 22(1), 78–
+90. 
+2. Lyle, R. C. (1981). A performance test for assessment of upper limb function in physical 
+rehabilitation treatment and research. International Journal of Rehabilitation Research, 4(4), 
+483–492. 
+3. McDonnell, M. (2008). Action Research Arm Test. Australian Journal of Physiotherapy, 
+54(3), 220.

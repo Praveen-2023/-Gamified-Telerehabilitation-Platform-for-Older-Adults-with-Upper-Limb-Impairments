@@ -1,0 +1,229 @@
+Evaluation_data 
+Our questionnaire for Doctor (Physiotherapist): 
+●​
+How do you usually handle upper-limb rehab without digital tools? Keywords: traditional methods, manual therapy, supervision, 
+subjective assessment 
+●​
+What problems do you face with the traditional method? Keywords: low motivation, poor compliance, no home tracking, lack of 
+visibility 
+●​
+Is motivation a big issue for people doing these exercises? Keywords: engagement, adherence, monotony, burnout 
+●​
+How do you track their progress right now? Keywords: goniometer, manual scoring, observation-based evaluation, no objective metrics 
+●​
+Have you used any gamified or digital rehab systems before? Keywords: VR systems, Kinect, mobile apps, limited exposure 
+●​
+If yes, which ones, and how did they work for you? Keywords: high cost, setup difficulty, calibration issues, low clinical depth 
+●​
+What movement parameters matter the most to you? (accuracy, smoothness, range, ROM,etc.) 
+●​
+Does camera-based tracking sound useful to you? What should we be careful about? Keywords: calibration, lighting, 
+detection accuracy, ease-of-use, consistency 
+●​
+How important is detecting compensatory movements like leaning or shoulder lifting? Keywords: compensatory 
+patterns, posture, trunk leaning, shoulder elevation 
+●​
+For our Arm Orchard game, what would you evaluate? Keywords: reach accuracy, grip detection, ROM utilization, completion time, 
+fatigue 
+●​
+For the shape tracing game, what should we measure? Keywords: path accuracy, trajectory smoothness, error rate, completion time, 
+stability 
+●​
+For the piano tiles game, what matters to you — reaction time, accuracy? Keywords: reaction time, fine motor control, 
+accuracy rate, coordination, rhythm 
+●​
+Do you think adaptive difficulty is necessary in such systems? Keywords: intensity matching, personalization, reducing 
+overexertion, avoiding boredom 
+●​
+Which clinical metrics would help you make decisions? Keywords: fatigue curves, ROM usage, smoothness indices, error trends, 
+progress tracking 
+●​
+What could make this system more useful in a clinic? (reports, data export, history tracking) 
+●​
+Any risks or safety concerns we should keep in mind? Keywords: overexertion, tracking errors, misinterpretation, privacy, safe 
+movement patterns 
+General questions for users(normal crowd): 
+●​
+“Hey, when you tried it, how did it feel? Easy? Confusing? Normal?” 
+●​
+“Did the camera pick up your hand okay, or did it miss it sometimes?” 
+●​
+“Anything that felt annoying or tiring while playing?” 
+●​
+“Was the setup fine for you -like the light, space, and camera position?” 
+●​
+“If you had to use this at home, do you think you’d be comfortable with it?” 
+●​
+“Did the games feel enjoyable, or too simple, or too repetitive?” 
+●​
+“Anything you wish worked differently or felt more smooth?” 
+●​
+“Would you change anything about the controls or the way it detects movement?” 
+Our Questionnaire for Caretakers 
+●​
+Was it easy for you to help the person use the app? 
+●​
+Did you find the setup simple or confusing? 
+●​
+Would reminders or notifications help you maintain a schedule? 
+●​
+Did the instructions on the screen feel clear enough? 
+●​
+Was the camera positioning stressful or manageable? 
+●​
+Do you think this system could help reduce your supervision workload? 
+●​
+Anything you feel the app should do differently to support you? 
+ 
+We spoke to 11 people from our general crowd i.e. our friends, classmates, and family members to understand how 
+they felt while trying the system and to get an honest sense of what worked well and what didn’t. Some of them got to 
+use our application as well. We observed that they found our games engaging and fun and some even said that doing 
+this in real time seems fun and challenging . We also got some suggestions for improvement and we have discussed 
+those points in our project report. 
+Points to be focused on or kept in mind while development :-  
+●​
+Tracking accuracy 
+●​
+Gesture reliability (grab-release, pointing, tracing) 
+●​
+False detections / missed detections 
+●​
+Lag or delay in movement 
+●​
+Environmental sensitivity (light, distance, angle) 
+●​
+Fatigue, arm strain 
+●​
+Movement complexity 
+●​
+User confidence 
+●​
+UI clarity 
+●​
+Game pacing 
+●​
+Engagement level 
+●​
+Real-world relevance 
+●​
+Independence / ease-of-use 
+●​
+Comfort with long-term usage 
+●​
+Immediate learning curve 
+●​
+Potential frustration points 
+●​
+Smoothness of experience 
+●​
+Overall satisfaction 
+ 
+ 
+Category 
+Keywords / Focus Areas 
+Description (What We 
+Evaluated) 
+Traditional Rehabilitation 
+Issues 
+Motivation, Compliance, 
+Visibility, Supervision, 
+Accuracy, Fatigue 
+Identified gaps in existing 
+rehab methods such as low 
+engagement, poor home 
+practice, and lack of tracking 
+Expert (Physiotherapist) 
+Insights 
+ROM, Smoothness, 
+Trajectory, Compensations, 
+Fatigue Curves, Metrics 
+Reliability 
+Collected clinical 
+requirements for movement 
+tracking and meaningful data 
+for therapy decisions. 
+Gamified Rehab Experience 
+Accessibility, Calibration, 
+Cost, Engagement, Clinical 
+Depth 
+Explored the doctor’s 
+experience with VR/Kinect 
+tools and limitations of older 
+systems. 
+Game 1 (Arm Orchard) 
+Metrics 
+Reach Accuracy, Grip 
+Consistency, Completion 
+Time, ROM Utilization, 
+Fatigue Indicators 
+Evaluated movement 
+precision, gesture 
+consistency, spatial accuracy, 
+and fatigue patterns. 
+Game 2 (Shape Tracing) 
+Metrics 
+Path Accuracy, Smoothness, 
+Error Rate, Time, Stability 
+Measured tracing accuracy, 
+movement control, 
+deviations, resets, and 
+endurance. 
+Game 3 (Piano Tiles) Metrics 
+Reaction Time, Accuracy 
+Rate, Fine Motor Control, 
+Rhythm, Bilateral Use 
+Assessed cognitive–motor 
+speed, hand–eye 
+coordination, finger dexterity, 
+and timing consistency. 
+Usability Observations 
+Ease of Use, Confusion 
+Points, Setup Difficulty, 
+Gesture Detection, 
+Instructions 
+Observed how users 
+understood instructions, 
+handled controls, and 
+interacted with the interface. 
+Naturalistic Behavior 
+Posture, Fatigue Signs, 
+Hesitation, Movement Flow, 
+Engagement 
+Watched natural user 
+behavior, body alignment, 
+and physical effort during 
+tasks. 
+Crowd Feedback (General 
+Users) 
+Accuracy Concerns, Camera 
+Reliability, Space Constraints, 
+Frustration, Inclusivity 
+Gathered non-expert 
+perspectives on camera 
+issues, environment 
+limitations, and accessibility. 
+Caretaker Insights 
+Assistance, Setup Support, 
+Instructions Clarity, 
+Reminders 
+Noted the caretaker’s role, 
+ease of guiding the user, and 
+the need for simpler 
+instructions. 
+Risks Identified 
+Overexertion, 
+Misinterpretation, Privacy, 
+Tracking Errors 
+Listed physical, emotional, 
+and ethical risks along with 
+mitigation strategies. 
+Overall Improvement Areas 
+Accuracy, Adaptive Difficulty, 
+Customization, Integration, 
+Real-Time Feedback 
+Identified enhancements 
+needed in motion tracking(for 
+precision sensors should be 
+used), personalization, and 
+clinician workflow support 
+ 
